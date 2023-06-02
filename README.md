@@ -1,3 +1,3 @@
-# Curs React-Avancat IT Academy
+# Curs de React Avançat IT Academy
 
 ## Alumne: Jordi Llop
