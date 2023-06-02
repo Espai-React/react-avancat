@@ -1,5 +1,8 @@
 {
-  "env": { "browser": true, "es2020": true },
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
   "extends": [
     "airbnb",
     "airbnb-typescript",
@@ -10,9 +13,12 @@
   ],
   "parserOptions": {
     "parser": "@typescript-eslint/parser",
-    "project": "./project/tsconfig.json"
+    "project": "./tsconfig.json"
   },
-  "plugins": ["react-refresh", "@typescript-eslint"],
+  "plugins": [
+    "react-refresh",
+    "@typescript-eslint"
+  ],
   "rules": {
     "react-refresh/only-export-components": "warn",
     "react/react-in-jsx-scope": 0,
@@ -23,5 +29,8 @@
     "react/jsx-props-no-spreading": 0,
     "react/require-default-props": 0,
     "import/no-absolute-path": 0
-  }
+  },
+  "ignorePatterns": [
+    "vite.config.ts"
+  ]
 }
