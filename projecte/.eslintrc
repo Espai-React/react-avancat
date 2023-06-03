@@ -29,7 +29,9 @@
     "react/jsx-props-no-spreading": 0,
     "react/require-default-props": 0,
     "import/no-absolute-path": 0,
-    "no-console": 0
+    // extres
+    "no-console": 0, // permetre console.log
+    "arrow-body-style": 0 // permetre component arrow
   },
   "ignorePatterns": [
     "vite.config.ts"
