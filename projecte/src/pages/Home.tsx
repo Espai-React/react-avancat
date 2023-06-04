@@ -1,5 +1,6 @@
-import Header from './components/Header';
-import Nav from './components/Nav';
+import Header from "../components/layouts";
+import { Nav } from "../components/molecules";
+
 
 const links = [
   { name: 'Buscador', url: '/buscador' },
@@ -7,7 +8,7 @@ const links = [
   { name: 'Mi perfil', url: '/mi-perfil' },
 ];
 
-const App = () => {
+const Home = () => {
   return (
     <Header>
       <h1>MIPISO.com.es</h1>
@@ -16,4 +17,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Home;
