@@ -1,6 +1,6 @@
-import Header from "../components/layouts";
-import { Nav } from "../components/molecules";
-
+import Header from '../components/layouts';
+import { Nav } from '../components/molecules';
+import { Text } from '../components/atoms';
 
 const links = [
   { name: 'Buscador', url: '/buscador' },
@@ -10,10 +10,13 @@ const links = [
 
 const Home = () => {
   return (
-    <Header>
-      <h1>MIPISO.com.es</h1>
-      <Nav links={links} />
-    </Header>
+    <>
+      <Header>
+        <h1>MIPISO.com.es</h1>
+        <Nav links={links} />
+      </Header>
+      <Text>Hola a tothom</Text>
+    </>
   );
 };
 

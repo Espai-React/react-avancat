@@ -1,7 +1,7 @@
 export const dimensions = {
-	font: {
-		small: 12,
-		medium: 18,
-		large: 24,
-	}
+  font: {
+    small: '0.75rem',
+    base: '1rem',
+    large: '1.25rem',
+  },
 };

@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import "./nav.css";
+import { Text } from '../../atoms';
 
 
 type TNav = {
@@ -14,7 +15,8 @@ const Nav: FC<TNav> = ({ links }) => (
     <ul>
       {links.map((link) => (
         <li key={link.url}>
-          <a href={link.url}>{link.name}</a>
+          <Text as="a" href={link.url}>{link.name}</Text>
+          {/* <a href={link.url}>{link.name}</a> */}
         </li>
       ))}
     </ul>
