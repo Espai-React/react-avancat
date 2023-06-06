@@ -1,3 +1,6 @@
-import Header from './Header/Header';
+import Body from './Body';
+import Header from './Header';
+import SubHeader from "./SubHeader";
 
-export default Header;
+
+export { Body, Header, SubHeader };
