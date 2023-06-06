@@ -20,7 +20,7 @@
     "@typescript-eslint"
   ],
   "rules": {
-    "react-refresh/only-export-components": "warn",
+    "react-refresh/only-export-components": /* "warn" */ 0,
     "react/react-in-jsx-scope": 0,
     "no-unused-vars": 1,
     "@typescript-eslint/no-unused-vars": 0,
@@ -32,8 +32,7 @@
     // extres
     "no-console": 0, // permetre console.log
     "arrow-body-style": 0, // permetre component arrow
-    "semi": ["warn", "always"] // avisar que falta el ;
-    
+    "semi": ["warn", "always"] // avisar que falta el ;    
   },
   "ignorePatterns": [
     "vite.config.ts"

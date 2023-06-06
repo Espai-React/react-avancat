@@ -8,13 +8,11 @@ type TBody = {
   children: ReactNode;
 };
 
-const Body: FC<TBody> = ({ children }) => {
-  return (
-    <BodyStyled>
-      <Header />
-      {children}
-    </BodyStyled>
-  );
-};
+const Body: FC<TBody> = ({ children }) => (
+  <BodyStyled>
+    <Header />
+    {children}
+  </BodyStyled>
+);
 
 export default Body;
