@@ -1,3 +1,4 @@
+import { styled } from 'styled-components';
 import { FC } from 'react';
 import { Label, Select, TSelect, TLabel } from '../atoms';
 
@@ -22,4 +23,4 @@ const SelectGroup: FC<TSelectGroup> = ({
   </div>
 );
 
-export default SelectGroup;
+export default styled(SelectGroup)``;

@@ -32,7 +32,8 @@
     // extres
     "no-console": 0, // permetre console.log
     "arrow-body-style": 0, // permetre component arrow
-    "semi": ["warn", "always"] // avisar que falta el ;    
+    "semi": ["warn", "always"], // avisar que falta el ;
+    "react/no-unused-prop-types": 1 // avisar prop types no utilitzats
   },
   "ignorePatterns": [
     "vite.config.ts"
