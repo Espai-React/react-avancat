@@ -8,7 +8,9 @@ export type TLabel = LabelHTMLAttributes<HTMLLabelElement> & {
   children: string;
 };
 
-const LabelStyled = styled(Text)<TLabel>`
+const LabelStyled = styled(Text).withConfig({
+  shouldForwardProp: (prop) => !['hiddenLabel'].includes(prop),
+})<TLabel>`
   ${({ hiddenLabel }) =>
     hiddenLabel &&
     `
@@ -26,8 +28,7 @@ const LabelStyled = styled(Text)<TLabel>`
 `;
 
 const Label: FC<TLabel> = ({ htmlFor, children, hiddenLabel = false }) => (
-  <LabelStyled as="label" htmlFor={htmlFor} hiddenLabel={hiddenLabel}
-  >
+  <LabelStyled as="label" htmlFor={htmlFor} hiddenLabel={hiddenLabel}>
     {children}
   </LabelStyled>
 );
