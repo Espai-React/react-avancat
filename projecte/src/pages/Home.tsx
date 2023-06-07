@@ -1,11 +1,11 @@
 import { Body, SubHeader } from '../components/layouts';
-import HomeFilters from '../components/organisms';
+import { HomeFilters } from '../components/organisms';
 
 const Home = () => {
   return (
     <Body>
       <SubHeader>
-        <HomeFilters/>
+        <HomeFilters />
       </SubHeader>
     </Body>
   );

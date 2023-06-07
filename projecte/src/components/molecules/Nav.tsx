@@ -41,4 +41,4 @@ const Nav: FC<TNav> = ({ links }) => (
   </NavStyled>
 );
 
-export default Nav;
+export default styled(Nav)``;

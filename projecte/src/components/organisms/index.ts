@@ -1,4 +1,4 @@
-import HomeFilters from "./HomeFilters";
+import HomeFilters from './HomeFilters';
+import Table from "./Table/Table";
 
-export default HomeFilters;
-
+export { HomeFilters, Table };

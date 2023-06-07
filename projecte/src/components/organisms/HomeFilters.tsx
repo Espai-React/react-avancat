@@ -43,4 +43,4 @@ const HomeFilters = () => (
   </HomeFilterStyled>
 );
 
-export default HomeFilters;
+export default styled(HomeFilters)``;

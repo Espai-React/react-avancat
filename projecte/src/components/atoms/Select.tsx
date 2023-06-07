@@ -1,4 +1,5 @@
 import { FC, SelectHTMLAttributes } from 'react';
+import { styled } from 'styled-components';
 
 type TOptions = {
   value: string;
@@ -22,4 +23,4 @@ const Select: FC<TSelect> = ({ name, id, options, ...rest }) => (
     </select>
 );
 
-export default Select;
+export default styled(Select)``;
