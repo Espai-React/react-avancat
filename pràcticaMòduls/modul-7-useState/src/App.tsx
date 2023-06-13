@@ -1,15 +1,20 @@
 import "./App.css";
 import { UseStateBasic, UseStateObjecte, UseBasicCounter, Crono } from "./components";
 
+const data = {
+  cronoInit: 123,
+  incrementInit: 10
+}
+
 const App = () => (
   <div>
     <UseStateBasic />
     <hr />
     <UseBasicCounter />
     <hr />
-    <UseStateObjecte/>
+    <UseStateObjecte />
     <hr />
-    <Crono cronoInit={123} />
+    <Crono cronoInit={data.cronoInit} incrementInit={data.incrementInit} />
   </div>
 );
 

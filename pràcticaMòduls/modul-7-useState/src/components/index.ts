@@ -1,7 +1,4 @@
-import UseStateBasic from "./UseStateBasic";
-import UseStateObjecte from "./UseStateObjecte";
-import UseBasicCounter from "./UseBasicCounter";
-import Crono from "./Crono";
-
-
-export { UseStateBasic, UseStateObjecte, UseBasicCounter, Crono };
+export { default as Crono } from "./Crono";
+export { default as UseBasicCounter } from "./UseBasicCounter";
+export { default as UseStateBasic } from "./UseStateBasic";
+export { default as UseStateObjecte } from "./UseStateObjecte";
