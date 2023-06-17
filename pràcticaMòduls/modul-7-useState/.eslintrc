@@ -1,0 +1,41 @@
+{
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "react-refresh",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "react-refresh/only-export-components": /* "warn" */ 0,
+    "react/react-in-jsx-scope": 0,
+    "no-unused-vars": 1,
+    "@typescript-eslint/no-unused-vars": 0,
+    "import/prefer-default-export": 0,
+    "react/function-component-definition": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/require-default-props": 0,
+    "import/no-absolute-path": 0,
+    // extres
+    "no-console": 0, // permetre console.log
+    "arrow-body-style": 0, // permetre component arrow
+    "semi": ["warn", "always"], // avisar que falta el ;
+    "react/no-unused-prop-types": 1, // avisar prop types no utilitzats
+  },
+  "ignorePatterns": [
+    "vite.config.ts"
+  ]
+}
