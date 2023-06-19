@@ -1,3 +1,2 @@
-export { urls } from './urls';
-export { mainNavigation } from './links';
-
+export { mainNavigation } from "./links";
+export { urls } from "./urls";
