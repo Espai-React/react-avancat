@@ -36,9 +36,9 @@ const FiltreImmobles: FC<TFiltreImmobles> = ({ immobles, initialFiltres }) => {
     );
   };
 
-  const filtratge = useMemo(() => {
+/*   const filtratge = useMemo(() => {
     return immobles.filter(({ categoria }) => categoria === filtre);
-  }, [immobles, filtre]);
+  }, [immobles, filtre]); */
 
   return (
     <div
