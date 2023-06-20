@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useCallback, useState } from "react";
 
 const initialItems = [
   {
@@ -24,27 +24,30 @@ const initialItems = [
 ];
 
 type TItem = {
-	id: number;
-	name: string;
-}
+  id: number;
+  name: string;
+};
 
-type TRemove = (id: number) => void
+type TRemove = (id: number) => void;
 
 const EsborrarItems = () => {
-	const [items, setItems] = useState<TItem[]>(initialItems);
-	
-	const onRemove: TRemove = (id) => {
-		const newItems = items.filter(item => item.id !== id);
-		setItems(newItems);
-	}
+  const [items, setItems] = useState<TItem[]>(initialItems);
+
+  const onRemove: TRemove = useCallback(
+    (id) => {
+      const newItems = items.filter((item) => item.id !== id);
+      setItems(newItems);
+    },
+    [items]
+  );
 
   return (
     <div>
       <h3>EsborrarItems</h3>
-			{items.map((item) => {
-				const { id } = item;
-				return <Child key={id} onRemove={onRemove} item={item} />;
-			})}
+      {items.map((item) => {
+        const { id } = item;
+        return <Child key={id} onRemove={onRemove} item={item} />;
+      })}
     </div>
   );
 };
@@ -52,17 +55,20 @@ const EsborrarItems = () => {
 export default EsborrarItems;
 
 type TChild = {
-  onRemove: (id: number) => void;
-  item: {
-    id: number;
-    name: string;
-  };
+  onRemove: TRemove;
+  item: TItem;
 };
 
 const Child: FC<TChild> = ({ onRemove, item }) => {
   console.log("Rendering...", item);
   return (
-    <div style={{ display: "flex" , alignItems: "center", justifyContent: "center", gap: 20}}>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: 20,
+      }}>
       <p>Item: {item.name}</p>
       <button onClick={() => onRemove(item.id)}>Esborrar</button>
     </div>
