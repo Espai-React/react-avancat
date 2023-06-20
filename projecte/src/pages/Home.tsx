@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useMemo } from 'react';
 import { Body, SubHeader } from '../components/layouts';
 import { HomeFilters } from '../components/organisms';
 import { Container } from '../styles';
@@ -21,15 +21,19 @@ const Houses: FC = () => {
     'http://localhost:3004/pisos'
   );
 
+  const filteredData = useMemo(() => {
+    return data?.filter((house) => house.city === 'barcelona');
+  }, [data]);
+
   if (loading) return <Container>Loading...</Container>;
   if (error) return <Container>Error...</Container>;
-
+  
   return (
     <Container>
-      {data?.map((house) => (
+      {filteredData?.map((house) => (
         <div key={house.id}>
           <h2>{house.title}</h2>
-          <img src={house.image} alt={`House number ${house.id}`} />
+          <img src={house.image} width="200" alt={`House number ${house.id}`} />
           <p>{house.price}</p>
           <p>{house.city}</p>
         </div>
