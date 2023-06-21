@@ -1,4 +1,4 @@
-import { FC, useCallback, useState } from "react";
+import React, { FC, useCallback, useState } from "react";
 
 const initialItems = [
   {
@@ -31,14 +31,13 @@ type TItem = {
 type TRemove = (id: number) => void;
 
 const EsborrarItems = () => {
+  console.log("Render pare");
+  
   const [items, setItems] = useState<TItem[]>(initialItems);
 
   const onRemove: TRemove = useCallback(
-    (id) => {
-      const newItems = items.filter((item) => item.id !== id);
-      setItems(newItems);
-    },
-    [items]
+    (id) => setItems((prev) => prev.filter((item) => item.id !== id)),
+    []
   );
 
   return (
@@ -59,8 +58,9 @@ type TChild = {
   item: TItem;
 };
 
-const Child: FC<TChild> = ({ onRemove, item }) => {
-  console.log("Rendering...", item);
+const Child: FC<TChild> = React.memo(({ onRemove, item }) => {
+  const { id, name } = item;
+  console.log("Render fill", id);
   return (
     <div
       style={{
@@ -69,8 +69,8 @@ const Child: FC<TChild> = ({ onRemove, item }) => {
         justifyContent: "center",
         gap: 20,
       }}>
-      <p>Item: {item.name}</p>
-      <button onClick={() => onRemove(item.id)}>Esborrar</button>
+      <p>Item: {name}</p>
+      <button onClick={() => onRemove(id)}>Esborrar</button>
     </div>
   );
-};
+});
