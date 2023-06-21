@@ -31,9 +31,9 @@ const FiltreImmoblesCallback: FC<TImmobles> = ({ immobles }) => {
         <option value="Pis">Pis</option>
       </select>
 			<div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-				<ul style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "start", gap: 10, textAlign: "left"}}>
+				<ul style={{textAlign: "left"}}>
 								{immoblesFiltrats.map(({ titol, categoria }) => (
-									<div key={id()}>
+									<div key={id()} style={{marginBottom: 10}}>
 										<li>{titol}</li>
 										<li>{categoria}</li>
 									</div>
